@@ -1,3 +1,4 @@
 const ADD_ARTICLE = "ADD_ARTICLE";
+const DATA_LOADED = 'DATA_LOADED';
 
-export { ADD_ARTICLE };
+export { ADD_ARTICLE, DATA_LOADED };
