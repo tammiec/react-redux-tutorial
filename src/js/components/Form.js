@@ -19,7 +19,7 @@ const ConnectedForm = (props) => {
   const handleSubmit = event => {
     event.preventDefault();
     const submitTitle = title;
-    props.addArticle(submitTitle);
+    props.addArticle({ title: submitTitle });
     setTitle('');
   };
 
