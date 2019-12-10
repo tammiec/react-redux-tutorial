@@ -11,7 +11,7 @@ export default function rootReducer(state = initialState, action) {
   }
 
   if (action.type === DATA_LOADED) {
-    return {...state, remoteArticles: [...state.remoteArticles, action.payload]}
+    return {...state, remoteArticles: [...state.remoteArticles, ...action.payload]}
   }
 
   return state;

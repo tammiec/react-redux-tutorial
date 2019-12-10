@@ -8,19 +8,19 @@ function mapStateToProps(state) {
   }
 }
 
-function Post(props) {
+export function Post(props) {
 
   useEffect(() => {
-    getData();
-  }, []);
+    props.getData();
+  }, [props]);
 
   return (
     <ul>
-      {props.articles.map((el, index) => (
-        <li key={index}>{el.title}</li>
+      {props.articles.map(el => (
+        <li key={el.id}>{el.title}</li>
       ))}
     </ul>
   );
 }
 
-export default connect(mapStateToProps, {getData}) (Post);
+export default connect(mapStateToProps, { getData })(Post);
